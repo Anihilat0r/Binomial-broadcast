@@ -4,7 +4,7 @@
 	receivers.
 */
 
-void binomial_bcast(void* data, int count, MPI_Datatype datatype, int root, MPI_Comm communicator)
+int binomial_bcast(void* data, int count, MPI_Datatype datatype, int root, MPI_Comm communicator)
 {
 	int order, total_order;
 	int relative_rank, snder_rank, recver_rank;
@@ -57,4 +57,5 @@ void binomial_bcast(void* data, int count, MPI_Datatype datatype, int root, MPI_
 
 		}
 	}
+	return 0;
 }
